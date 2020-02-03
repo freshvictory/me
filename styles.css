@@ -1,0 +1,86 @@
+/* -- VARIABLES and GLOBAL SETTINGS -- */
+
+:root {
+    --c-frame: #eee;
+    --c-bg: #b3492f;
+    --c-wood: #764a24;
+    --c-border: #7d0000;
+    /* --c-text: #6f4339; */
+    --c-text: #f8d2ad;
+    --c-text-head: #f8d2ad;
+
+    --px-margin: 30px;
+
+    --f-head: small-caps 40px Palatino;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+h1 {
+    margin: 0;
+}
+
+
+/* -- CHROME -- */
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--c-frame);
+
+    /* Wood frame */
+    /* background-color: var(--c-wood);
+    background-image: url('images/wood.jpg');
+    background-size: cover;
+    padding: 25px; */
+}
+
+.frame {
+    padding: 35px;
+    height: 100%;
+    width: 100%;
+    /* box-shadow: inset 0px 0px 11px 0px rgba(50, 50, 50, 0.75); */
+}
+
+.content {
+    background-color: var(--c-bg);
+    height: 100%;
+    box-shadow: 10px 10px 20px 0px #999;
+    padding: var(--px-margin);
+}
+
+
+/* -- HEADER -- */
+
+header {
+    color: var(--c-text-head);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+}
+
+.home {
+    text-decoration: none;
+    font: var(--f-head);
+    padding: 0 20px 5px;
+    line-height: 1;
+    width: max-content;
+    border-bottom: 1px solid var(--c-text-head);
+}
+
+.home:visited {
+    color: inherit;
+}
+
+
+/* -- MAIN -- */
+
+main {
+    color: var(--c-text);
+}
