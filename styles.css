@@ -1,7 +1,7 @@
 /* -- VARIABLES and GLOBAL SETTINGS -- */
 
 :root {
-    --c-frame: #fff;
+    --c-bg-light: #fff;
     --c-bg: #f9f3ed;
     --c-bg-pop: #b3492f;
     --c-wood: #764a24;
@@ -13,6 +13,7 @@
     --c-text-head: #121212;/*#f8d2ad; /*#faf5de;*/
 
     --em-margin: 1.5rem;
+    --em-spacing: 1.25em;
 
     --em-border-small: 0.1rem;
     --c-border: var(--c-bg-pop);
@@ -29,7 +30,7 @@
 
 html {
     box-sizing: border-box;
-    background-color: var(--c-frame);
+    background-color: var(--c-bg);
     font-size: 18px;
 }
 
@@ -52,9 +53,7 @@ body {
     color: var(--c-text);
 
     display: grid;
-    grid-row-gap: var(--em-margin);
-    row-gap: var(--em-margin);
-    grid-template-rows: [header] auto [main] 1fr [footer] auto;
+    grid-template-rows: [header] auto [main] 1fr;
     min-height: 100vh;
 }
 
@@ -62,8 +61,10 @@ body {
 /* -- HEADER -- */
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
     grid-row: header;
-    background-color: var(--c-bg);
     padding: var(--em-margin);
     color: var(--c-text-pop);
 }
@@ -80,63 +81,20 @@ nav {
     font-size: 1.25rem;
     line-height: 1;
     min-width: max-content;
-    /* background-color: var(--c-bg); */
 
     padding: 0 0.25em 0.15em 0.4em;
     line-height: 1;
     border-radius: 0.15em;
     border-left: var(--border-small);
-
-    margin-left: 0;
-    transition:
-        margin 500ms ease-in-out,
-        transform 500ms ease-in-out;
 }
 
 .home:visited {
     color: inherit;
 }
 
-@media screen and (max-width: 900px) {
-    .home {
-        margin-left: 50%;
-        transform: translateX(-50%);
-        border-right: var(--border-small);
-    }
-}
-
-
-/* -- MAIN -- */
-
-main {
-    color: var(--c-text);
-    height: 100%;
-    margin: var(--em-margin);
-    grid-row: main;
-}
-
-
-/* -- HEADING -- */
-
-.heading {
-    font: var(--f-head);
-    margin-bottom: var(--em-spacing);
-    color: var(--c-text-pop);
-}
-
-
-/* -- FOOTER -- */
-
-.footer {
-    grid-row: footer;
-    background-color: var(--c-bg);
-    padding: var(--em-margin);
-    font-size: var(--fs-smaller);
-}
-
 .links {
+    font-size: var(--fs-smaller);
     display: flex;
-    margin-left: auto;
     color: var(--c-text-light);
 }
 
@@ -150,4 +108,41 @@ main {
 .email:visited,
 .github:visited {
     color: inherit;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --em-margin: 1rem;
+    }
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home {
+        border-right: var(--border-small);
+        margin-bottom: 0.25rem;
+    }
+}
+
+
+/* -- MAIN -- */
+
+main {
+    z-index: 2;
+    color: var(--c-text);
+    height: 100%;
+    grid-row: main;
+    padding: var(--em-margin);
+    background-color: var(--c-bg-light);
+    box-shadow: 0.15em 0.15em 1em 0 #33333333;
+}
+
+
+/* -- HEADING -- */
+
+.heading {
+    font: var(--f-head);
+    margin-bottom: var(--em-spacing);
+    color: var(--c-text-pop);
 }
