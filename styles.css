@@ -16,8 +16,10 @@
     --em-spacing: 1.25em;
 
     --em-border-small: 0.1rem;
+    --em-border-large: 0.25rem;
     --c-border: var(--c-bg-pop);
-    --border-small: var(--em-border-small) solid var(--c-bg-pop);
+    --border-small: var(--em-border-small) solid;
+    --border-large: var(--em-border-large) solid;
     --em-border-radius: 0.4rem;
 
     --fs-smaller: 0.85rem;
@@ -44,6 +46,14 @@ ol, ul {
     list-style: none outside none;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 /* -- CHROME -- */
 
@@ -51,6 +61,7 @@ body {
     margin: 0;
     font: var(--f-serif);
     color: var(--c-text);
+    line-height: 1.5;
 
     display: grid;
     grid-template-rows: [header] auto [main] 1fr;
@@ -111,9 +122,6 @@ nav {
 }
 
 @media screen and (max-width: 900px) {
-    :root {
-        --em-margin: 1rem;
-    }
     nav {
         flex-direction: column;
         justify-content: center;
@@ -138,11 +146,17 @@ main {
     box-shadow: 0.15em 0.15em 1em 0 #33333333;
 }
 
+@media screen and (max-width: 900px) {
+    main {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
 
 /* -- HEADING -- */
 
 .heading {
     font: var(--f-head);
-    margin-bottom: var(--em-spacing);
     color: var(--c-text-pop);
 }

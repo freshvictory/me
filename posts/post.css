@@ -1,9 +1,12 @@
 /* -- ARTICLE -- */
 
 article {
-    max-width: 30rem;
     margin: auto;
-    position: relative;
+    max-width: max-content;
+
+    display: grid;
+    grid-template-areas: "header content";
+    grid-column-gap: 3rem;
 }
 
 .date,
@@ -12,12 +15,53 @@ article {
     margin-bottom: var(--em-spacing);
 }
 
+.article-header {
+    text-align: right;
+    grid-area: header;
+    max-width: 15rem;
+    padding-top: 0.25em;
+    border-top: var(--border-large);
+    border-color: var(--c-text-pop);
+}
 
-/* -- DATE -- */
+.heading {
+    margin-bottom: 1rem;
+}
+
+.article-content {
+    grid-area: content;
+    max-width: 30rem;
+}
+
+@media screen and (max-width: 900px) {
+    article {
+        grid-template-areas: "header" "content";
+    }
+
+    .article-header {
+        text-align: left;
+        border: none;
+        max-width: 30rem;
+        margin-bottom: var(--em-spacing);
+    }
+}
+
+
+/* -- BYLINE -- */
 
 .date {
-    color: var(--c-text-light);
     font-style: italic;
+}
+
+.byline-sep {
+    font-size: 0.75rem;
+    color: var(--c-text-light);
+}
+
+.byline,
+.date {
+    display: inline;
+    color: var(--c-text-light);
     font-size: var(--fs-smaller);
 }
 
@@ -26,6 +70,7 @@ article {
 
 .snippit {
     border: var(--border-small);
+    border-color: var(--c-bg-pop);
     border-radius: 0.5rem;
     overflow: hidden;
     max-width: max-content;

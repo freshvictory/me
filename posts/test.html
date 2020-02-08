@@ -4,9 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width">
 
-        <title>Test | Justin Renjilian</title>
+        <title>Type-safe internationalization in TypeScript | Justin Renjilian</title>
 
-        <link rel="stylesheet" href="../fonts/fonts.css"/>
         <link rel='stylesheet' href="../styles.css"/>
         <link rel="stylesheet" href="post.css"/>
     </head>
@@ -22,12 +21,16 @@
             </nav>
         </header>
         <main>
-            <article>
-                <h1 class="heading"> Type-safe internationalization in TypeScript</h1>
-                <section class="date">
-                    <time datetime="2020-02-04">Feb. 4, 2020.</time>
-                </section>
-                <section class="article-content">
+            <article itemscope itemtype="https://schema.org/Article">
+                <heading class="article-header">
+                    <h1 class="heading" itemprop="headline"> Type-safe internationalization in TypeScript</h1>
+                    <p class="byline" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="author">Justin Renjilian</span>
+                    </p>
+                    <span class="byline-sep">•</span>
+                    <time class="date" datetime="2020-02-04" itemprop="datePublished">Feb 4, 2020</time>
+                </heading>
+                <section class="article-content" itemprop="articleBody">
                     <p>
                         I love TypeScript. 
                     </p>
