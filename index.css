@@ -31,6 +31,10 @@ main {
     margin-bottom: var(--em-spacing);
 }
 
+.post-link a {
+    color: inherit;
+}
+
 .post-link a:visited {
     color: inherit;
 }
