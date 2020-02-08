@@ -1,0 +1,65 @@
+:root {
+    --em-spacing: 1.25em;
+}
+
+/* -- ARTICLE -- */
+
+article {
+    max-width: 40rem;
+    margin: auto;
+    position: relative;
+}
+
+.article-content p,
+.article-content figure {
+    margin-bottom: var(--em-spacing);
+}
+
+
+/* -- CODE BLOCK -- */
+
+.snippit {
+    border: var(--border-small);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0.2rem 0.2rem 0.75rem -3px #0000004d;
+    background-color: var(--c-bg);
+    min-width: 15rem;
+}
+
+.caption {
+    padding: 0.45em 1em;
+    background: var(--c-bg-pop);
+    color: var(--c-text-pop-light);
+    font: var(--f-small-head);
+}
+
+.code {
+    margin: 0 1rem 1rem;
+    display: inline-block;
+    counter-reset: line;
+    font: var(--f-mono);
+}
+
+.line {
+    line-height: 1.5em;
+}
+
+.line::before {
+    counter-increment: line;
+    content: counter(line);
+    color: var(--c-text-light);
+    margin: 0 2em 0 1em;
+}
+
+
+/* -- SIGNATURE -- */
+
+.signature {
+    color: var(--c-text-light);
+    font-style: italic;
+    font-size: var(--fs-smaller);
+}
