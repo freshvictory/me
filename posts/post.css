@@ -28,6 +28,13 @@ article {
     margin-bottom: 1rem;
 }
 
+.date {
+    font-style: italic;
+    display: inline;
+    color: var(--c-text-light);
+    font-size: var(--fs-smaller);
+}
+
 .article-content {
     grid-area: content;
     max-width: 30rem;
@@ -49,17 +56,7 @@ article {
 
 /* -- BYLINE -- */
 
-.date {
-    font-style: italic;
-}
-
-.byline-sep {
-    font-size: 0.75rem;
-    color: var(--c-text-light);
-}
-
-.byline,
-.date {
+.byline {
     display: inline;
     color: var(--c-text-light);
     font-size: var(--fs-smaller);

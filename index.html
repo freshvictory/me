@@ -6,6 +6,7 @@
         <title>Justin Renjilian</title>
 
         <link rel='stylesheet' href='styles.css'/>
+        <link rel='stylesheet' href='index.css'/>
     </head>
     <body>
         <header class="header">
@@ -20,17 +21,52 @@
         </header>
         <main>
             <section id="intro">
+                <p class="description">
+                    mostly harmless. cleveland, oh.
+                </p>
             </section>
-            <section id="posts">
-                <h2 class="heading">Posts</h2>
+            <section id="posts" class="container">
+                <h2 class="heading">posts</h2>
                 <ol>
                     <li>
-                        <a href="posts/test.html">Test post</a>
+                        <a class="post-link" href="posts/typed-i18n-with-typescript.html">
+                            Typed internationalization in TypeScript
+                            <time class="date" datetime="2020-02-04">Feb 4, 2020</time>
+                        </a>
+                    </li>
+                </ol>
+            </section>
+            <section id="projecs" class="container">
+                <h2 class="heading">projects</h2>
+                <ol>
+                    <li class="post-link">
+                        <a href="https://tichu.cards" target="blank">
+                            tichu.cards
+                        </a>
+                        <p class="description">
+                            A scoring app for the Tichu card game, 
+                            <a href="https://github.com/freshvictory/tichu-web" target="blank">written in Elm</a>.
+                        </p>
+                    </li>
+                    <li class="post-link">
+                        <a href="https://poke.tools" target="blank">
+                            poke.tools
+                        </a>
+                        <p class="description">
+                            A type effectiveness checker for Pokémon,
+                            <a href="https://github.com/freshvictory/pokemon-elm" target="blank">written in Elm</a>.
+                        </p>
+                    </li>
+                    <li class="post-link">
+                        <a href="https://github.com/freshvictory/elm-base" target="blank">
+                            elm-base
+                        </a>
+                        <p class="description">
+                            A scaffold Elm project.
+                        </p>
                     </li>
                 </ol>
             </section>
         </main>
-        <footer class="footer">
-        </footer>
     </body>
 </html>

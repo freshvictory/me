@@ -160,3 +160,11 @@ main {
     font: var(--f-head);
     color: var(--c-text-pop);
 }
+
+
+/* -- GENERAL -- */
+
+.dot-sep {
+    font-size: 0.75rem;
+    color: var(--c-text-light);
+}

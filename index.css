@@ -1,0 +1,63 @@
+/* -- MAIN -- */
+
+main {
+    display: grid;
+    grid-template-rows: [intro] max-content [posts] max-content [projects] max-content;
+    grid-row-gap: calc(2 * var(--em-spacing));
+    row-gap: calc(2 * var(--em-spacing));
+}
+
+
+/* -- INTRO -- */
+
+#intro {
+    grid-row: intro;
+}
+
+.description {
+    color: var(--c-text-light);
+}
+
+
+/* -- LIST CONTAINER -- */
+
+.container .heading {
+    font-size: 1rem;
+    margin-bottom: var(--em-spacing);
+}
+
+.post-link {
+    color: var(--c-text-pop);
+    margin-bottom: var(--em-spacing);
+}
+
+.post-link a:visited {
+    color: inherit;
+}
+
+.post-link .date,
+.post-link .source,
+.post-link .description {
+    color: var(--c-text-light);
+    display: block;
+    margin-left: 2em;
+    font-style: italic;
+}
+
+.post-link .description a {
+    color: var(--c-text-pop);
+}
+
+
+/* -- POSTS -- */
+
+#posts {
+    grid-row: posts;
+}
+
+
+/* -- PROJECTS -- */
+
+#projects {
+    grid-row: projects;
+}
